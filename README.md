@@ -2,7 +2,7 @@
 A GPX (GPS eXchange format) egy XML alapú nyílt szabvány, amely pontok, útvonalak és érdekes helyek leírására szolgál. 
 A beltéri navigáció megvalósítására ezt a szabványt vettük alapul és fejlesztettük tovább olyan egyedi kiterjesztésekkel (XML elemekkel, továbbiakban: tag).
 
-# GPX dokumentáció 
+# GPX dokumentáció
 ## Helyszín adatok
 A beltéri tárlatvezetés alapdatainak leírása a gpx fájl <metadata> tag között található elemek szolgálnak:
 
@@ -69,8 +69,7 @@ A tárlat fő borítóképének azonosítója
 
 ```xml
 <coverimagelist>
-	<coverimage>
-	</coverimage>
+	<coverimage></coverimage>
 <coverimagelist>
 ```
 A tárlat további borítóképeinek azonosítói, tetszőleges hosszúságú listában definiálva.
@@ -97,14 +96,14 @@ A tárlat tulajdonosának megnevezése
 
 ```xml
 <tourTrls>
-	<languageCode>
-	<languageName>
-	<name>
-	<description>
-	<startPlace>
-	<translatedAudioExist>
-	<translatedVideoExist>
-	<translatedExternalVideoExist>
+		<languageCode></languageCode>
+		<languageName></languageName>
+		<name></name>
+		<description></description>
+		<startPlace></startPlace>
+		<translatedAudioExist></translatedAudioExist>
+		<translatedVideoExist></translatedVideoExist>
+		<translatedExternalVideoExist></translatedExternalVideoExist>
 </tourTrls>
 ```
 A tárlat alapadatinak nyelvfüggő mezői. A `<languageCode>` az adott nyelv kódját, a `<languageName>` a nyelv megnevezését tartalmazza. 
@@ -161,15 +160,15 @@ Az adott érdekes helyhez tartozó kép fájlok azonosítójának, tetszőleges 
 
 ```xml
 <poitranslationlist>
-	<poitranslation>
-		<poilanguagecode>
-		<poilanguagename>
-		<poinametranslation>
-		<poidescriptiontranslation>
-		< poitranslatedaudifilename>
-		< poitranslatedvideofilename>
-		< poitranslatedexternalvideolink>
-	</poitranslation>
+		<poitranslation>
+			<poilanguagecode></poilanguagecode>
+			<poilanguagename></poilanguagename>
+			<poinametranslation></poinametranslation>
+			<poidescriptiontranslation></poidescriptiontranslation>
+			<poitranslatedaudifilename></poitranslatedaudifilename>
+			<poitranslatedvideofilename></poitranslatedvideofilename>
+			<poitranslatedexternalvideolink></poitranslatedexternalvideolink>
+		</poitranslation>
 </poitranslationlist>
 ```
 Az érdekes helyhez tartozó nyelvfüggő adatokat tartalmazza. A `<poilanguagecode>` és `<poilanguagename>` az adott nyelv kódját és megnevezését, a `<poinametranslation>` és `<poidescriptiontranslation>` pedig a POI nevét és leírását tartalmazza. A `<poitranslatedaudifilename>,  <poitranslatedvideofilename>`, `<poitranslatedexternalvideolink>` tagek pedig az adott nyelvű hang- és videó anyagokat jelölik.
