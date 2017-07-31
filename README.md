@@ -96,14 +96,14 @@ A tárlat tulajdonosának megnevezése
 
 ```xml
 <tourTrls>
-		<languageCode></languageCode>
-		<languageName></languageName>
-		<name></name>
-		<description></description>
-		<startPlace></startPlace>
-		<translatedAudioExist></translatedAudioExist>
-		<translatedVideoExist></translatedVideoExist>
-		<translatedExternalVideoExist></translatedExternalVideoExist>
+	<languageCode></languageCode>
+	<languageName></languageName>
+	<name></name>
+	<description></description>
+	<startPlace></startPlace>
+	<translatedAudioExist></translatedAudioExist>
+	<translatedVideoExist></translatedVideoExist>
+	<translatedExternalVideoExist></translatedExternalVideoExist>
 </tourTrls>
 ```
 A tárlat alapadatinak nyelvfüggő mezői. 
@@ -139,8 +139,8 @@ Az érdekes helyekhez tartozó `<extensions>` tag Minden olyan további POI-t le
 Érdekes hely egyedi azonosítója.
 
 ```xml
-< poiimagelist >
-		< poiimage></poiimage>
+<poiimagelist>
+	<poiimage></poiimage>
 </poiimagelist>
 ```
 Az adott érdekes helyhez tartozó kép fájlok azonosítójának, tetszőleges hosszúságú listája.
@@ -161,15 +161,15 @@ Az adott érdekes helyhez tartozó kép fájlok azonosítójának, tetszőleges 
 
 ```xml
 <poitranslationlist>
-		<poitranslation>
-			<poilanguagecode></poilanguagecode>
-			<poilanguagename></poilanguagename>
-			<poinametranslation></poinametranslation>
-			<poidescriptiontranslation></poidescriptiontranslation>
-			<poitranslatedaudifilename></poitranslatedaudifilename>
-			<poitranslatedvideofilename></poitranslatedvideofilename>
-			<poitranslatedexternalvideolink></poitranslatedexternalvideolink>
-		</poitranslation>
+	<poitranslation>
+		<poilanguagecode></poilanguagecode>
+		<poilanguagename></poilanguagename>
+		<poinametranslation></poinametranslation>
+		<poidescriptiontranslation></poidescriptiontranslation>
+		<poitranslatedaudifilename></poitranslatedaudifilename>
+		<poitranslatedvideofilename></poitranslatedvideofilename>
+		<poitranslatedexternalvideolink></poitranslatedexternalvideolink>
+	</poitranslation>
 </poitranslationlist>
 ```
 Az érdekes helyhez tartozó nyelvfüggő adatokat tartalmazza. A `<poilanguagecode>` és `<poilanguagename>` az adott nyelv kódját és megnevezését, a `<poinametranslation>` és `<poidescriptiontranslation>` pedig a POI nevét és leírását tartalmazza. A `<poitranslatedaudifilename>,  <poitranslatedvideofilename>`, `<poitranslatedexternalvideolink>` tagek pedig az adott nyelvű hang- és videó anyagokat jelölik.
