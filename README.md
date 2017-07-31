@@ -1,6 +1,6 @@
 # GPX formátum áttekintés
 A GPX (GPS eXchange format) egy XML alapú nyílt szabvány, amely pontok, útvonalak és érdekes helyek leírására szolgál. 
-A beltéri navigáció megvalósítására ezt a szabványt vettük alapul és fejlesztettük tovább olyan egyedi kiterjesztésekkel (XML elemekkel, továbbiakban: tag).
+A beltéri navigáció megvalósítására ezt a szabványt vettük alapul és fejlesztettük tovább egyedi kiterjesztésekkel (XML elemekkel, továbbiakban: tag).
 
 # GPX dokumentáció
 ## Helyszín adatok
