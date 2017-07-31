@@ -96,19 +96,19 @@ A tárlat tulajdonosának megnevezése
 
 ```xml
 <tourTrls>
-		<languageCode></languageCode>
-		<languageName></languageName>
-		<name></name>
-		<description></description>
-		<startPlace></startPlace>
-		<translatedAudioExist></translatedAudioExist>
-		<translatedVideoExist></translatedVideoExist>
-		<translatedExternalVideoExist></translatedExternalVideoExist>
+	<languageCode></languageCode>
+	<languageName></languageName>
+	<name></name>
+	<description></description>
+	<startPlace></startPlace>
+	<translatedAudioExist></translatedAudioExist>
+	<translatedVideoExist></translatedVideoExist>
+	<translatedExternalVideoExist></translatedExternalVideoExist>
 </tourTrls>
 ```
-A tárlat alapadatinak nyelvfüggő mezői. 
-A `<languageCode>` az adott nyelv kódját, a `<languageName>` a nyelv megnevezését tartalmazza. 
-A`<name>, <description>, <startplace>` tagek az adott nyelvre lefordított szöveges értékeket tartalmazzák. 
+A tárlat alapadatinak nyelvfüggő mezői.
+A `<languageCode>` az adott nyelv kódját, a `<languageName>` a nyelv megnevezését tartalmazza.
+A`<name>, <description>, <startplace>` tagek az adott nyelvre lefordított szöveges értékeket tartalmazzák.
 A`<translatedAudioExist>, <translateVideoExist> <translatedExternalVideoExist>` tagek logikai értékek, meghatározzák, hogy az adott nyelven tartozik-e hang- és videó anyaga tárlathoz, illetve van-e aktív internet kapcsolat mellett megtekinthető videós tartalom.
 
 ## Érdekes helyek
@@ -118,7 +118,7 @@ Az érdekes helyeket a GPX fájl szabvány szerint `<wpt>` tag jelöli, az adott
 ```xml
 <time></time>
 ```
-Eredeti GPX szabvány által is definiált, érdekes hely rögzítésének időpontját tartalmazó dátum mező. A tárlaton belül elfoglalt sorrendiség meghatározására is szolgál. 
+Eredeti GPX szabvány által is definiált, érdekes hely rögzítésének időpontját tartalmazó dátum mező. A tárlaton belül elfoglalt sorrendiség meghatározására is szolgál.
 
 ```xml
 <name></name>
@@ -131,7 +131,7 @@ Adott érdekes hely nevét tartalmazó mező, a helyszín alapadatainak részét
 Érdekes hely leírását tartalmazó mező, a helyszín alapadatainak részét képző `<language>` tag által definiált nyelven. A `<name> `tag az eredeti GPX szabványban is értelmezett.
 
 ### Kiterjesztések
-Az érdekes helyekhez tartozó `<extensions>` tag Minden olyan további POI-t leíró információt tartalmaz, ami már nem képzi részét a GPX szabványnak. 
+Az érdekes helyekhez tartozó `<extensions>` tag Minden olyan további POI-t leíró információt tartalmaz, ami már nem képzi részét a GPX szabványnak.
 
 ```xml
 <poiid></poiid>
@@ -139,8 +139,8 @@ Az érdekes helyekhez tartozó `<extensions>` tag Minden olyan további POI-t le
 Érdekes hely egyedi azonosítója.
 
 ```xml
-< poiimagelist >
-		< poiimage></poiimage>
+<poiimagelist>
+	<poiimage></poiimage>
 </poiimagelist>
 ```
 Az adott érdekes helyhez tartozó kép fájlok azonosítójának, tetszőleges hosszúságú listája.
@@ -161,15 +161,15 @@ Az adott érdekes helyhez tartozó kép fájlok azonosítójának, tetszőleges 
 
 ```xml
 <poitranslationlist>
-		<poitranslation>
-			<poilanguagecode></poilanguagecode>
-			<poilanguagename></poilanguagename>
-			<poinametranslation></poinametranslation>
-			<poidescriptiontranslation></poidescriptiontranslation>
-			<poitranslatedaudifilename></poitranslatedaudifilename>
-			<poitranslatedvideofilename></poitranslatedvideofilename>
-			<poitranslatedexternalvideolink></poitranslatedexternalvideolink>
-		</poitranslation>
+	<poitranslation>
+		<poilanguagecode></poilanguagecode>
+		<poilanguagename></poilanguagename>
+		<poinametranslation></poinametranslation>
+		<poidescriptiontranslation></poidescriptiontranslation>
+		<poitranslatedaudifilename></poitranslatedaudifilename>
+		<poitranslatedvideofilename></poitranslatedvideofilename>
+		<poitranslatedexternalvideolink></poitranslatedexternalvideolink>
+	</poitranslation>
 </poitranslationlist>
 ```
 Az érdekes helyhez tartozó nyelvfüggő adatokat tartalmazza. A `<poilanguagecode>` és `<poilanguagename>` az adott nyelv kódját és megnevezését, a `<poinametranslation>` és `<poidescriptiontranslation>` pedig a POI nevét és leírását tartalmazza. A `<poitranslatedaudifilename>,  <poitranslatedvideofilename>`, `<poitranslatedexternalvideolink>` tagek pedig az adott nyelvű hang- és videó anyagokat jelölik.
