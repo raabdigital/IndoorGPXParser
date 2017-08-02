@@ -13,14 +13,14 @@ public class GPXMetadata {
 	//AUTHOR
 	private GPXPersonType personType;
 	
-	private GPXMetdadataExtension extensions;
+	private GPXMetadataExtension extensions;
 	
 	public GPXMetadata() {
 	}
 
 
 	public GPXMetadata(String authorName, String tourName,
-			String tourDescription, Date startTime, GPXMetdadataExtension extensions) {
+			String tourDescription, Date startTime, GPXMetadataExtension extensions) {
 		this.metadataName = tourName;
 		this.metadataDescription = tourDescription;
 		this.metadataTime = startTime;
@@ -101,12 +101,12 @@ public class GPXMetadata {
 	}
 
 
-	public GPXMetdadataExtension getExtensions() {
+	public GPXMetadataExtension getExtensions() {
 		return extensions;
 	}
 
 
-	public void setExtensions(GPXMetdadataExtension extensions) {
+	public void setExtensions(GPXMetadataExtension extensions) {
 		this.extensions = extensions;
 	}
 	

@@ -8,7 +8,6 @@ public interface GPXConstants {
     String VERSION_ATTR = "version";
     String CREATOR_ATTR = "creator";
     String EXTENSION = "extensions";
-    String DESCRIPTION = "desc";
 
     String STARTPALCE = "startplace";
     String STARTDESCRIPTION = "startdescription";
@@ -27,7 +26,23 @@ public interface GPXConstants {
     String STROLLERFRIENDLY = "strollerfriendly";
     String MAINCOVERIMAGEID = "maincoverimageid";
     String COVERIMAGELIST = "coverimagelist";
-    String COVERIMAGE = "coverimage";
+
+    String START_LATITUDE = "startLatitude";
+    String START_LONGITUDE = "startLongitude";
+    String COUNTRY_NAME = "countryName";
+    String AUTHOR = "author";
+
+    String META_DATA_TRANSLATION_LIST = "metadatatranslationlist";
+    String TRANSLATED_LANGUAGE_CODE = "translatedlanguageCode";
+    String TRANSLATED_LANGUAGE_NAME = "translatedlanguageName";
+    String TRANSLATED_NAME = "translatedName";
+    String TRANSLATED_DESCRIPTION = "translated_description";
+    String TRANSLATED_STARTPLACE = "translated_startplace";
+
+    String TRANSLATED_AUDIOEXIST = "translatedAudioExist";
+    String TRANSLATED_VIDEOEXIST = "translatedVideoExist";
+    String TRANSLATED_EXTERNALVIDEOEXIST = "translatedExternalVideoExist";
+
 
     String LAT_ATTR = "lat";
     String LON_ATTR = "lon";

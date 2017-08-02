@@ -24,8 +24,9 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import product.engine.gpxparser.gpx.nodes.GPXBeaconDevice;
 import product.engine.gpxparser.gpx.nodes.GPXConstants;
+import product.engine.gpxparser.gpx.nodes.GPXMetaDataExtensionTrl;
 import product.engine.gpxparser.gpx.nodes.GPXMetadata;
-import product.engine.gpxparser.gpx.nodes.GPXMetdadataExtension;
+import product.engine.gpxparser.gpx.nodes.GPXMetadataExtension;
 import product.engine.gpxparser.gpx.nodes.GPXRoute;
 import product.engine.gpxparser.gpx.nodes.GPXTrack;
 import product.engine.gpxparser.gpx.nodes.GPXTrackSegment;
@@ -889,7 +890,7 @@ public class IndoorGPXParser {
                     }
                     metadata.setPersonType(personType);
                 } else if (GPXConstants.EXTENSION.equals(currentNode.getNodeName())) {
-                    GPXMetdadataExtension ext = new GPXMetdadataExtension();
+                    GPXMetadataExtension ext = new GPXMetadataExtension();
                     NodeList extNodes = currentNode.getChildNodes();
                     if (extNodes != null) {
                         for (int j = 0; j < extNodes.getLength(); j++) {
@@ -957,6 +958,113 @@ public class IndoorGPXParser {
                                 if (currentExtNode.getFirstChild() != null) {
                                     ext.setImageMapFileName(currentExtNode.getFirstChild().getNodeValue());
                                 }
+
+                            } else if (GPXConstants.START_LATITUDE.equals(currentExtNode.getNodeName())) {
+                                if (currentExtNode.getFirstChild() != null) {
+                                    ext.setStartLatitude(Long.parseLong(currentExtNode.getFirstChild().getNodeValue()));
+                                }
+
+                            } else if (GPXConstants.START_LONGITUDE.equals(currentExtNode.getNodeName())) {
+                                if (currentExtNode.getFirstChild() != null) {
+                                    ext.setStartLongitude(Long.parseLong(currentExtNode.getFirstChild().getNodeValue()));
+                                }
+                            } else if (GPXConstants.COUNTRY_NAME.equals(currentExtNode.getNodeName())) {
+                                if (currentExtNode.getFirstChild() != null) {
+                                    ext.setCountryName(currentExtNode.getFirstChild().getNodeValue());
+                                }
+                            } else if (GPXConstants.AUTHOR.equals(currentExtNode.getNodeName())) {
+                                if (currentExtNode.getFirstChild() != null) {
+                                    ext.setAuthor(currentExtNode.getFirstChild().getNodeValue());
+                                }
+
+                            } else if (GPXConstants.META_DATA_TRANSLATION_LIST.equals(currentExtNode.getNodeName())) {
+
+                                List<GPXMetaDataExtensionTrl> gpxMetaDataExtensionTrlList = new ArrayList<>();
+
+                                NodeList translationNodes = currentExtNode.getChildNodes();
+
+                                if (translationNodes != null) {
+                                    for (int translationNodeIndex = 0; translationNodeIndex < translationNodes.getLength(); translationNodeIndex++) {
+
+                                        GPXMetaDataExtensionTrl gpxMetaDataExtensionTrl = new GPXMetaDataExtensionTrl();
+
+                                        NodeList translationItemNodes = translationNodes.item(translationNodeIndex).getChildNodes();
+
+                                        if (translationItemNodes != null) {
+
+                                            for (int h = 0; h < translationItemNodes.getLength(); h++) {
+
+                                                Node currentTranslationItemNode = translationItemNodes.item(h);
+
+                                                if (GPXConstants.TRANSLATED_LANGUAGE_CODE.equals(currentTranslationItemNode.getNodeName())) {
+
+                                                    if (currentTranslationItemNode.getFirstChild().getNodeValue() != null) {
+
+                                                        gpxMetaDataExtensionTrl.setLanguageCode(currentTranslationItemNode.getFirstChild().getNodeValue());
+                                                    }
+
+                                                } else if (GPXConstants.TRANSLATED_LANGUAGE_NAME.equals(currentTranslationItemNode.getNodeName())) {
+
+                                                    if (currentTranslationItemNode.getFirstChild().getNodeValue() != null) {
+
+                                                        gpxMetaDataExtensionTrl.setLanguageName(currentTranslationItemNode.getFirstChild().getNodeValue());
+                                                    }
+
+                                                } else if (GPXConstants.TRANSLATED_NAME.equals(currentTranslationItemNode.getNodeName())) {
+
+                                                    if (currentTranslationItemNode.getFirstChild().getNodeValue() != null) {
+
+                                                        gpxMetaDataExtensionTrl.setName(currentTranslationItemNode.getFirstChild().getNodeValue());
+                                                    }
+
+                                                } else if (GPXConstants.TRANSLATED_DESCRIPTION.equals(currentTranslationItemNode.getNodeName())) {
+
+                                                    if (currentTranslationItemNode.getFirstChild().getNodeValue() != null) {
+
+                                                        gpxMetaDataExtensionTrl.setDescription(currentTranslationItemNode.getFirstChild().getNodeValue());
+                                                    }
+                                                } else if (GPXConstants.TRANSLATED_STARTPLACE.equals(currentTranslationItemNode
+                                                        .getNodeName())) {
+
+                                                    if (currentTranslationItemNode.getFirstChild().getNodeValue() != null) {
+
+                                                        gpxMetaDataExtensionTrl.setStartPlace(currentTranslationItemNode.getFirstChild().getNodeValue
+                                                                ());
+                                                    }
+                                                } else if (GPXConstants.TRANSLATED_AUDIOEXIST.equals(currentTranslationItemNode
+                                                        .getNodeName())) {
+
+                                                    if (currentTranslationItemNode.getFirstChild().getNodeValue() != null) {
+
+                                                        gpxMetaDataExtensionTrl.setTranslatedAudioExist(Boolean.parseBoolean(currentTranslationItemNode
+                                                                .getFirstChild().getNodeValue
+                                                                        ()));
+                                                    }
+                                                } else if (GPXConstants.TRANSLATED_VIDEOEXIST.equals(currentTranslationItemNode
+                                                        .getNodeName())) {
+
+                                                    if (currentTranslationItemNode.getFirstChild().getNodeValue() != null) {
+
+                                                        gpxMetaDataExtensionTrl.setTranslatedVideoExist(Boolean.parseBoolean(currentTranslationItemNode
+                                                                .getFirstChild().getNodeValue
+                                                                        ()));
+                                                    }
+                                                } else if (GPXConstants.TRANSLATED_EXTERNALVIDEOEXIST.equals(currentTranslationItemNode
+                                                        .getNodeName())) {
+
+                                                    if (currentTranslationItemNode.getFirstChild().getNodeValue() != null) {
+
+                                                        gpxMetaDataExtensionTrl.setTranslatedExternalVideoExist(Boolean.parseBoolean(currentTranslationItemNode
+                                                                .getFirstChild().getNodeValue
+                                                                        ()));
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        gpxMetaDataExtensionTrlList.add(gpxMetaDataExtensionTrl);
+                                    }
+                                }
+                                ext.setGpxMetaDataExtensionTrlDTOs(gpxMetaDataExtensionTrlList);
                             }
                         }
                     }

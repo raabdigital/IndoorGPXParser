@@ -2,7 +2,7 @@ package product.engine.gpxparser.gpx.nodes;
 
 import java.util.List;
 
-public class GPXMetdadataExtension {
+public class GPXMetadataExtension {
 
 	private String startplace;
 	private String tourTypeCode;
@@ -23,12 +23,15 @@ public class GPXMetdadataExtension {
 	private String mainCoverImageId;
 	private List<String> coverImages;
 	private String imageMapFileName;
+
 	private Long startLatitude;
 	private Long startLongitude;
 	private String countryName;
 	private String author;
 
-	public GPXMetdadataExtension() {
+	private List<GPXMetaDataExtensionTrl> gpxMetaDataExtensionTrlDTOs;
+
+	public GPXMetadataExtension() {
 	}
 
 	public String getStartplace() {
@@ -175,4 +178,43 @@ public class GPXMetdadataExtension {
 		this.imageMapFileName = imageMapFileName;
 	}
 
+	public List<GPXMetaDataExtensionTrl> getGpxMetaDataExtensionTrlDTOs() {
+		return gpxMetaDataExtensionTrlDTOs;
+	}
+
+	public void setGpxMetaDataExtensionTrlDTOs(List<GPXMetaDataExtensionTrl> gpxMetaDataExtensionTrlDTOs) {
+		this.gpxMetaDataExtensionTrlDTOs = gpxMetaDataExtensionTrlDTOs;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getCountryName() {
+		return countryName;
+	}
+
+	public void setCountryName(String countryName) {
+		this.countryName = countryName;
+	}
+
+	public Long getStartLongitude() {
+		return startLongitude;
+	}
+
+	public void setStartLongitude(Long startLongitude) {
+		this.startLongitude = startLongitude;
+	}
+
+	public Long getStartLatitude() {
+		return startLatitude;
+	}
+
+	public void setStartLatitude(Long startLatitude) {
+		this.startLatitude = startLatitude;
+	}
 }
