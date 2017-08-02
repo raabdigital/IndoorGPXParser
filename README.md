@@ -2,7 +2,10 @@
 A GPX (GPS eXchange format) egy XML alapú nyílt szabvány, amely pontok, útvonalak és érdekes helyek leírására szolgál. 
 A beltéri navigáció megvalósítására ezt a szabványt vettük alapul és fejlesztettük tovább egyedi kiterjesztésekkel (XML elemekkel, továbbiakban: tag).
 
-# GPX dokumentáció
+#IndoorGPXParser használata
+Az IndoorGPXParser osztály parseGPX(InputStream in) függvénynek egy bemeneti paramétere van: a GPX fájlból létrehozott InputStream típusú objektum. A függvényt meghívva visszatérési értékként megkapható a GPX fájlt reprezentáló GPX típusú java objektum, ami tartalmazza az összes beolvasott értéket. 
+
+# GPX tagek
 ## Helyszín adatok
 A beltéri tárlatvezetés alapdatainak leírása a gpx fájl <metadata> tag között található elemek szolgálnak:
 
