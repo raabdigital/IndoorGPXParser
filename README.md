@@ -251,7 +251,7 @@ Esemény kategóriájú POI esetében az esemény végdátuma.
 ```
 Szolgáltatóhoz vagy eseményhez kapcsolódó e-mail elérhetőség.
 
-Licensz GPLv3:
+Licensz: GPLv3
 
     Copyright (C) 2017 Raab Digital Kft
 
